@@ -1,68 +1,49 @@
-# VR Haptics Project 🎮🦾
+# VR Haptics Project
 
-A Unity-based VR simulation exploring **haptic feedback integration** using the **bHaptics Tactosy** suit. This was a summer research project investigating how tactile feedback enhances immersion in virtual reality environments.
+This was my summer research project looking at how haptic feedback changes the experience of being in a VR simulation. I wanted to go beyond just visuals and audio and actually make the body feel something, so I integrated the bHaptics Tactosy suit into a Unity VR environment built on the Meta XR SDK.
 
-## Overview
+The core idea was simple: when something happens in the virtual world, you feel it. Getting that to actually work and feel natural was the interesting part.
 
-This project combines the **Oculus/Meta XR SDK** with **bHaptics** to create a VR experience where physical sensations are synchronized with in-game events — such as impacts, environmental effects, and interactions. Built on Unity's XR Interaction Toolkit (XRI).
+## What it does
 
-## Features
+The project is a VR simulation running on Meta Quest where haptic feedback is triggered by in-world events. A nature environment sets the scene, animated characters populate it, and spatial audio plus haptic patterns fire together to create something that feels more immersive than a typical VR demo.
 
-- 🦾 **bHaptics Integration** — Full haptic feedback support via the bHaptics SDK for chest/arm vest (Tactosy)
-- 🥽 **Oculus/Meta XR** — Built with Meta XR SDK and Unity's XR Origin rig
-- 🌿 **Nature Environment** — Immersive outdoor scene using the Nature Starter Kit assets
-- 🎭 **Character Animations** — Animated characters via Mixamo rigs
-- 🔊 **Spatial Audio** — 3D audio assets synced with haptic events
-- 🎬 **Multiple Scenes** — Scene-based structure for different simulation states
-
-## Project Structure
+## Project structure
 
 ```
-├── Animations/         # Character animation clips
-├── Audio/              # Spatial audio files
-├── Bhaptics/           # bHaptics SDK integration files
-├── Characters/         # Rigged character assets
-├── NatureStarterKit/   # Environment assets
-├── Oculus/             # Meta/Oculus XR integration
-├── Resources/          # Shared project resources
-├── Samples/            # Unity XR Toolkit samples
-├── Scenes/             # Unity scenes
-├── Scripts/            # C# gameplay scripts
-├── Settings/           # Project/render settings
-├── XR/                 # XR configuration
-├── XRI/                # XR Interaction Toolkit assets
+Animations/         character animation clips
+Audio/              spatial audio files
+Bhaptics/           bHaptics SDK integration
+Characters/         rigged character assets
+NatureStarterKit/   environment assets
+Oculus/             Meta XR integration
+Resources/          shared project resources
+Scenes/             Unity scenes
+Scripts/            C# gameplay and haptics scripts
+Settings/           project and render pipeline settings
+XR/                 XR configuration
+XRI/                XR Interaction Toolkit assets
 ```
 
-## Tech Stack
+## Built with
 
-| Tool | Purpose |
-|------|---------|
-| Unity | Game engine & VR framework |
-| C# | Scripting language |
-| bHaptics SDK | Haptic feedback control |
-| Meta XR SDK | Oculus headset integration |
-| XR Interaction Toolkit | VR interaction system |
+- Unity (2022.3 LTS)
+- C#
+- bHaptics Unity Plugin
+- Meta XR SDK
+- Unity XR Interaction Toolkit
 
-## Requirements
+## Setup
 
-- Unity 2022.3+ (LTS)
-- Meta Quest 2/3 headset or compatible OpenXR device
-- bHaptics Tactosy vest + bHaptics Player app
-- Meta XR SDK (via Unity Package Manager)
+1. Clone the repo
+2. Open in Unity Hub with Unity 2022.3+
+3. Install Meta XR SDK, XR Interaction Toolkit, and the bHaptics Unity Plugin via Package Manager
+4. Connect a Meta Quest headset via Link or Air Link
+5. Open the bHaptics Player app on your PC
+6. Hit Play in the Editor or build to the headset
 
-## Getting Started
+## Notes
 
-1. Clone this repository
-2. Open in Unity Hub (Unity 2022.3+)
-3. Install required packages via Package Manager (Meta XR SDK, XR Interaction Toolkit, bHaptics Unity Plugin)
-4. Connect your Meta Quest headset via Link or Air Link
-5. Launch bHaptics Player on your PC
-6. Press Play in the Unity Editor or build and deploy to your headset
+You need a bHaptics Tactosy vest for the haptic feedback to actually work. The simulation still runs without it but you lose the whole point of the project.
 
-## Research Context
-
-This project was developed as part of a research internship exploring the role of **haptic feedback in VR immersion**. It investigates how physical sensations affect user presence and engagement in simulated environments.
-
----
-
-*Developed by [Gaurav Naudiyal](https://github.com/gauravnaudiyal) — MSc Computer Science, Trinity College Dublin*
+Developed by Gaurav Naudiyal as part of an MSc research internship at Trinity College Dublin.
