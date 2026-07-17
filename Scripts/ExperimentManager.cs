@@ -14,9 +14,12 @@ public class ExperimentManager : MonoBehaviour
     public bool FirstPerson { get; private set; }
 
     [Header("Bot Reset")]
-    public Transform botTransform;      // Drag the walking bot GameObject here
+    public Transform botTransform;
     public Vector3 botSpawnPosition = new Vector3(0.1f, 0.06999993f, -100.5f);
-    public Quaternion botSpawnRotation;  // captured automatically at Awake
+    public Quaternion botSpawnRotation;
+
+    [Header("Haptics")]
+    public TactSuitController tactSuitController;
 
     void Awake()
     {
@@ -53,7 +56,7 @@ public class ExperimentManager : MonoBehaviour
                 FirstPerson = true;
                 break;
             case ConditionType.C_VisualAudio3PP:
-                HapticsEnabled = false;
+                HapticsEnabled = true;
                 AudioEnabled = true;
                 FirstPerson = false;
                 break;
@@ -63,6 +66,9 @@ public class ExperimentManager : MonoBehaviour
                 FirstPerson = true;
                 break;
         }
+
+        if (tactSuitController != null)
+            tactSuitController.SetHapticsActive(HapticsEnabled);
 
         ResetBot();
 

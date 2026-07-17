@@ -4,6 +4,7 @@ using Bhaptics.SDK2;
 public class FootstepAudio : MonoBehaviour
 {
     public AudioClip[] footstepSounds;
+    public TactSuitController tactSuitController;
 
     private AudioSource audioSource;
 
@@ -16,14 +17,20 @@ public class FootstepAudio : MonoBehaviour
     {
         if (ExperimentManager.Instance.AudioEnabled) PlayStepSound();
         if (ExperimentManager.Instance.HapticsEnabled)
+        {
             BhapticsLibrary.Play("footstepleft");
+            if (tactSuitController != null) tactSuitController.PlayLeftStep();
+        }
     }
 
     public void RightFootStep()
     {
         if (ExperimentManager.Instance.AudioEnabled) PlayStepSound();
         if (ExperimentManager.Instance.HapticsEnabled)
+        {
             BhapticsLibrary.Play("footstepright");
+            if (tactSuitController != null) tactSuitController.PlayRightStep();
+        }
     }
 
     void PlayStepSound()

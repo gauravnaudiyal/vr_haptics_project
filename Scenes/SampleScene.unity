@@ -308,7 +308,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1441949093026986903, guid: 2129561fd5ef2284086f81f4eb432d8f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1223355491}
   m_SourcePrefab: {fileID: 100100000, guid: 2129561fd5ef2284086f81f4eb432d8f, type: 3}
 --- !u!1 &423529120
 GameObject:
@@ -423,7 +426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   botHead: {fileID: 1590114453}
---- !u!114 &678560314
+--- !u!114 &678560321
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -438,7 +441,7 @@ MonoBehaviour:
   cameraOffset: {fileID: 1531279446}
   mainCamera: {fileID: 1274542343}
   firstPersonOffset: {x: 0, y: 1.6, z: 0}
-  thirdPersonOffset: {x: 0, y: 2.2, z: -2}
+  thirdPersonOffset: {x: 0, y: 2.2, z: -4}
 --- !u!1 &686412900
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,6 +475,7 @@ MonoBehaviour:
   botTransform: {fileID: 932746502}
   botSpawnPosition: {x: 0.1, y: 0.06999993, z: -100.5}
   botSpawnRotation: {x: 0, y: 0, z: 0, w: 0}
+  tactSuitController: {fileID: 1223355491}
 --- !u!4 &686412902
 Transform:
   m_ObjectHideFlags: 0
@@ -636,8 +640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   footstepSounds:
   - {fileID: 8300000, guid: 207ec3277c6549743a37ad7ac7cfdfb0, type: 3}
-  - {fileID: 8300000, guid: 4d02b0adaeaf8a248b387753aa873069, type: 3}
-  - {fileID: 8300000, guid: e4f6f7c50189736488d0fe5101c1fa6d, type: 3}
+  tactSuitController: {fileID: 1223355491}
 --- !u!82 &932746500
 AudioSource:
   m_ObjectHideFlags: 0
@@ -754,6 +757,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 407960, guid: 0018a0d5fcd38d34d81764846a43c4bd, type: 3}
   m_PrefabInstance: {fileID: 103818537}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1223355490 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1441949093026986903, guid: 2129561fd5ef2284086f81f4eb432d8f, type: 3}
+  m_PrefabInstance: {fileID: 187833175}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1223355491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223355490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d77bd33284aaad46aa698b1b9e3ef43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftOscillationKey: leftoscillation
+  rightOscillationKey: rightoscillation
 --- !u!20 &1274542343 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 7277802327414017196, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
@@ -1329,7 +1351,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: NaN, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 9.1835e-41, y: NaN, z: 9.78048e-39, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -1844,7 +1866,7 @@ PrefabInstance:
       addedObject: {fileID: 678560307}
     - targetCorrespondingSourceObject: {fileID: 8298045291338814966, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 678560314}
+      addedObject: {fileID: 678560321}
   m_SourcePrefab: {fileID: 100100000, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

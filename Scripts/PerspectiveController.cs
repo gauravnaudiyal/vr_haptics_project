@@ -6,7 +6,7 @@ public class PerspectiveController : MonoBehaviour
     public Camera mainCamera;            // XR Origin's "Main Camera"
 
     public Vector3 firstPersonOffset = new Vector3(0f, 1.6f, 0f);
-    public Vector3 thirdPersonOffset = new Vector3(0f, 2.2f, -4.5f);
+    public Vector3 thirdPersonOffset = new Vector3(0f, 2.2f, -4.0f);
 
     void Update()
     {
